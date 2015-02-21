@@ -10,7 +10,7 @@ def unique_id_filter(records):
     ids_seen = set()
     for rec in records:
         if rec.id in ids_seen:
-            print sys.stderr, "Seen id: {0}. Skiping.".format(rec.id)
+            print >> sys.stderr, "Seen id: {0}. Skiping.".format(rec.id)
             continue
         ids_seen.add(rec.id)
         yield rec
